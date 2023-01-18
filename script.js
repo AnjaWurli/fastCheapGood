@@ -4,16 +4,13 @@ const good = document.querySelector("#good");
 let last = null; //buffering
 
 function checkbox(name) {
+  console.log(name);
   if (fast.checked && cheap.checked && good.checked) {
     last.checked = false;
   }
-  last = name; //erst überschreiben, nachdem gecheckt wurde
+  //erst überschreiben, nachdem gecheckt wurde:
+  last = document.querySelector(`#${name}`);
 }
 
-fast.addEventListener("change", () => checkbox(fast));
-cheap.addEventListener("change", () => checkbox(cheap));
-good.addEventListener("change", () => checkbox(good));
-
-//Funktion, abfragt, ob alle gechecked sind
-//eventListener, die die funktion aufruft
-//was wurde zu letzt gechecked?
+//eventListener auf umschließendes Element der Checkboxes:
+document.body.addEventListener("change", (event) => checkbox(event.target.id));
