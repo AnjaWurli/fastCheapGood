@@ -29,3 +29,7 @@ A label should point to it's input element. The label can then be used to access
 ## Example Video
 
 https://user-images.githubusercontent.com/16404104/146916035-59f1b678-f87b-4529-a18e-0578bb2d3d37.mov
+
+## Source
+
+https://github.com/coding-bootcamps-eu/web-apps-foundation/blob/main/web-app-basics/03-fast-cheap-good.md
