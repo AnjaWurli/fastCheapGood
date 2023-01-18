@@ -1,34 +1,18 @@
 const fast = document.querySelector("#fast");
 const cheap = document.querySelector("#cheap");
 const good = document.querySelector("#good");
-let last = null;
+let last = null; //buffering
 
-function checkbox1() {
+function checkbox(name) {
   if (fast.checked && cheap.checked && good.checked) {
     last.checked = false;
   }
-  last = fast;
+  last = name; //erst überschreiben, nachdem gecheckt wurde
 }
 
-function checkbox2() {
-  if (fast.checked && cheap.checked && good.checked) {
-    last.checked = false;
-  }
-  last = cheap;
-}
-
-function checkbox3() {
-  if (fast.checked && cheap.checked && good.checked) {
-    last.checked = false;
-  }
-  last = good;
-}
-
-fast.addEventListener("change", checkbox1);
-cheap.addEventListener("change", checkbox2);
-good.addEventListener("change", checkbox3);
-
-console.log(fast.checked);
+fast.addEventListener("change", () => checkbox(fast));
+cheap.addEventListener("change", () => checkbox(cheap));
+good.addEventListener("change", () => checkbox(good));
 
 //Funktion, abfragt, ob alle gechecked sind
 //eventListener, die die funktion aufruft
