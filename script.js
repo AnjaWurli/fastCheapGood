@@ -1,11 +1,8 @@
-const fast = document.querySelector("#fast");
-const cheap = document.querySelector("#cheap");
-const good = document.querySelector("#good");
 let last = null; //buffering
 
 function checkbox(name) {
   console.log(name);
-  if (fast.checked && cheap.checked && good.checked) {
+  if (document.querySelectorAll("input:checked").length === 3) {
     last.checked = false;
   }
   //erst überschreiben, nachdem gecheckt wurde:
