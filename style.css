@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 300px;
+}
+
+label {
+  font-size: 4rem;
+  font-family: monospace;
+  padding: 1rem;
+}
+
+input {
+  width: 2rem;
+  height: 2rem;
+}
